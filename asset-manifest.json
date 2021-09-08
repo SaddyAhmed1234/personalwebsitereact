@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/personalwebsitereact/static/css/main.e0b20a3e.chunk.css",
+    "main.js": "/personalwebsitereact/static/js/main.5b80f51e.chunk.js",
+    "main.js.map": "/personalwebsitereact/static/js/main.5b80f51e.chunk.js.map",
+    "runtime-main.js": "/personalwebsitereact/static/js/runtime-main.74f8e8ac.js",
+    "runtime-main.js.map": "/personalwebsitereact/static/js/runtime-main.74f8e8ac.js.map",
+    "static/js/2.851a97d8.chunk.js": "/personalwebsitereact/static/js/2.851a97d8.chunk.js",
+    "static/js/2.851a97d8.chunk.js.map": "/personalwebsitereact/static/js/2.851a97d8.chunk.js.map",
+    "index.html": "/personalwebsitereact/index.html",
+    "static/css/main.e0b20a3e.chunk.css.map": "/personalwebsitereact/static/css/main.e0b20a3e.chunk.css.map",
+    "static/js/2.851a97d8.chunk.js.LICENSE.txt": "/personalwebsitereact/static/js/2.851a97d8.chunk.js.LICENSE.txt",
+    "static/media/back.286db8d4.jpg": "/personalwebsitereact/static/media/back.286db8d4.jpg",
+    "static/media/saddybg-preview.27d21889.png": "/personalwebsitereact/static/media/saddybg-preview.27d21889.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.74f8e8ac.js",
+    "static/js/2.851a97d8.chunk.js",
+    "static/css/main.e0b20a3e.chunk.css",
+    "static/js/main.5b80f51e.chunk.js"
+  ]
+}
