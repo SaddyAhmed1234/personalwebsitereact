@@ -11,7 +11,7 @@ import { Container } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
   container: {
     // background: "grey",
-    height: "100%",
+    height: "100vh",
     backgroundImage: `url(${back})`,
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
@@ -46,6 +46,27 @@ const useStyles = makeStyles((theme) => ({
     zIndex: 23,
     paddingLeft: 40,
     fontFamily: "Balsamiq Sans",
+    // maxWidth: 1000,
+  },
+  // lottie: {
+  //   width: 500,
+  //   height: 500,
+  // },
+  [theme.breakpoints.down("sm")]: {
+    text: {
+      fontSize: 45,
+    },
+    container: {
+      // maxWidth: 1000,
+      paddingTop: 0,
+      paddingBottom: 0,
+    },
+    textContainer: {
+      marginBottom: 50,
+    },
+    shadow: {
+      // height: ,
+    },
   },
 }));
 
@@ -79,7 +100,7 @@ function Home() {
           </Grid>
           <Grid item xs>
             <div>
-              <Lottie options={defaultOptions} height={500} width={500} />
+              <Lottie options={defaultOptions} width={300} height={300} />
             </div>
           </Grid>
         </Grid>

@@ -12,6 +12,15 @@ const useStyles = makeStyles((theme) => ({
       width: "25ch",
     },
   },
+
+  textField: {
+    width: "50%",
+  },
+  [theme.breakpoints.down("sm")]: {
+    textField: {
+      width: "100%",
+    },
+  },
 }));
 
 export default function ColorTextFields() {
@@ -36,7 +45,7 @@ export default function ColorTextFields() {
           label="Name"
           color="secondary"
           variant="outlined"
-          style={{ width: "50%" }}
+          className={classes.textField}
           required
         />
         <TextField
@@ -44,7 +53,8 @@ export default function ColorTextFields() {
           label="Email"
           variant="outlined"
           color="secondary"
-          style={{ width: "50%" }}
+          className={classes.textField}
+          // fullWidth
           required
         />
         <TextField
@@ -52,7 +62,7 @@ export default function ColorTextFields() {
           label="Subject"
           variant="outlined"
           color="secondary"
-          style={{ width: "50%" }}
+          className={classes.textField}
           required
         />
 
@@ -61,7 +71,7 @@ export default function ColorTextFields() {
           label="Message"
           variant="outlined"
           color="secondary"
-          style={{ width: "50%" }}
+          className={classes.textField}
           required
           minRows={6}
           multiline

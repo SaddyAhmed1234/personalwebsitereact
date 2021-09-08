@@ -25,7 +25,7 @@ export default function WholeContent() {
         <About />
         <Resume />
         <AppForm />
-        <Portfolio />
+        {/* <Portfolio /> */}
         <Footer />
       </div>
     </>

@@ -24,6 +24,13 @@ const useStyles = makeStyles((theme) => ({
 
   appbar: {
     background: colors.black,
+    maxWidth: "100%",
+  },
+
+  [theme.breakpoints.down("sm")]: {
+    appbar: {
+      Width: 50,
+    },
   },
 }));
 

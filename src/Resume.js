@@ -4,7 +4,13 @@ import colors from "./colors";
 import Divider from "@material-ui/core/Divider";
 import profile from "./images/saddybg-preview.png";
 import Heading from "./components/Heading";
-import { List, ListItem, ListItemText, Typography } from "@material-ui/core";
+import {
+  List,
+  ListItem,
+  ListItemText,
+  Typography,
+  makeStyles,
+} from "@material-ui/core";
 import { Button } from "@material-ui/core";
 import GetAppIcon from "@material-ui/icons/GetApp";
 import FavoriteIcon from "@material-ui/icons/Favorite";
@@ -12,34 +18,49 @@ import ProgressBar from "./components/ProgressBar";
 import CGrid from "./components/Grid";
 import WorkExperience from "./components/WorkExperience";
 
+const useStyles = makeStyles((theme) => ({
+  container: {
+    width: "100%",
+    height: 300,
+    background: colors.black,
+  },
+  image: {
+    border: "3px solid #fff",
+    borderRadius: "50%",
+  },
+
+  [theme.breakpoints.down("sm")]: {
+    image: {
+      textAlign: "center",
+    },
+    container: {
+      textAlign: "center",
+    },
+  },
+}));
+
 function Resume() {
+  const classes = useStyles();
   return (
     <div style={{ padding: 40, background: colors.black, color: colors.light }}>
       <Heading text={"Resume"} />
-      <div
-        style={{
-          width: "100%",
-          height: 200,
-          background: colors.black,
-          // borderBottom: "1px solid #fff",
-        }}
-      >
+      <div className={classes.container}>
         <Grid
           container
           justifyContent="space-between"
           alignItems="center"
           direction="row"
         >
-          <Grid item xs={5}>
+          <Grid item xs={12}>
             <img
               src={profile}
               alt="profile"
               width={150}
               height={150}
-              style={{ border: "3px solid #fff", borderRadius: "50%" }}
+              className={classes.image}
             />
           </Grid>
-          <Grid item xs={7}>
+          <Grid item xs={12}>
             <div style={{ marginBottom: 20 }}>
               <h1>Saddy Ahmed</h1>
               <p>Web and Mobile Developer</p>

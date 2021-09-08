@@ -26,6 +26,13 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 35,
     marginBottom: 10,
   },
+  [theme.breakpoints.down("sm")]: {
+    image: {
+      width: 300,
+      height: 300,
+      marginBottom: 40,
+    },
+  },
 }));
 
 export default function WholeContent() {
@@ -51,7 +58,7 @@ export default function WholeContent() {
               className={classes.image}
             />
           </Grid>
-          <Grid item xs>
+          <Grid item xs className={classes.descGrid}>
             <h1 className={classes.h1}>I am Saddy</h1>
             <h1 className={classes.h1}>
               I am a Professional web designer and Developer
