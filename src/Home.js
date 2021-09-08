@@ -6,6 +6,7 @@ import animationData from "./animation/programming2.json";
 import Lottie from "react-lottie";
 import colors from "./colors";
 import Grid from "@material-ui/core/Grid";
+import { Container } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -24,9 +25,9 @@ const useStyles = makeStyles((theme) => ({
   },
   text: {
     fontSize: 50,
-    fontWeight: "bold",
     zIndex: 10,
     color: colors.light,
+    // fontWeight: 500,
   },
   text2: {
     color: colors.light,
@@ -63,7 +64,7 @@ function Home() {
   return (
     <div className={classes.container}>
       <div className={classes.shadow}></div>
-      <div className={classes.containerHeader}>
+      <Container className={classes.containerHeader}>
         <Grid
           container
           direction="row"
@@ -82,7 +83,7 @@ function Home() {
             </div>
           </Grid>
         </Grid>
-      </div>
+      </Container>
     </div>
   );
 }

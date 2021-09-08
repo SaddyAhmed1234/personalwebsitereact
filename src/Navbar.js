@@ -1,36 +1,30 @@
 import React from "react";
 import PropTypes from "prop-types";
-import {
-  AppBar,
-  Toolbar,
-  Typography,
-  CssBaseline,
-  useScrollTrigger,
-  Fab,
-  Zoom
-} from "@material-ui/core";
+import AppBar from "@material-ui/core/AppBar";
+import Toolbar from "@material-ui/core/Toolbar";
+import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import useScrollTrigger from "@material-ui/core/useScrollTrigger";
+import Box from "@material-ui/core/Box";
+import Container from "@material-ui/core/Container";
+import Fab from "@material-ui/core/Fab";
 import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
+import Zoom from "@material-ui/core/Zoom";
 import MenuDrawer from "./Menu";
-// import Home from "./Home";
 import WholeContent from "./wholeContent/WholeContent";
+import colors from "./colors";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     position: "fixed",
     bottom: theme.spacing(2),
-    right: theme.spacing(2)
+    right: theme.spacing(2),
   },
-  menuButton: {
-    marginRight: theme.spacing(2)
+
+  appbar: {
+    background: colors.black,
   },
-  navBar: {
-    background: "#2C2E43",
-    height: 60,
-    paddingBottom: 0,
-    display: "flex",
-    justifyContent: "center"
-  }
 }));
 
 function ScrollTop(props) {
@@ -42,7 +36,7 @@ function ScrollTop(props) {
   const trigger = useScrollTrigger({
     target: window ? window() : undefined,
     disableHysteresis: true,
-    threshold: 100
+    threshold: 100,
   });
 
   const handleClick = (event) => {
@@ -66,7 +60,11 @@ function ScrollTop(props) {
 
 ScrollTop.propTypes = {
   children: PropTypes.element.isRequired,
-  window: PropTypes.func
+  /**
+   * Injected by the documentation to work in an iframe.
+   * You won't need it on your project.
+   */
+  window: PropTypes.func,
 };
 
 export default function BackToTop(props) {
@@ -74,16 +72,10 @@ export default function BackToTop(props) {
   return (
     <React.Fragment>
       <CssBaseline />
-      <AppBar position="fixed" className={classes.navBar}>
-        <Toolbar variant="dense">
+      <AppBar className={classes.appbar} position="fixed">
+        <Toolbar>
           <MenuDrawer />
-          <Typography
-            variant="h6"
-            color="inherit"
-            style={{ textAlign: "center" }}
-          >
-            Saddy
-          </Typography>
+          <Typography variant="h6">Saddy</Typography>
         </Toolbar>
       </AppBar>
       <Toolbar id="back-to-top-anchor" />

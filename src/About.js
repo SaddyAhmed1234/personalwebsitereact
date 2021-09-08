@@ -11,16 +11,16 @@ import Heading from "./components/Heading";
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    background: colors.black,
+    background: colors.light,
     paddingTop: 40,
     paddingRight: 40,
     paddingLeft: 40,
-    color: "#fff",
+    color: colors.black,
     // paddingBottom: 30,
   },
   image: {
     float: "left",
-    opacity: 0.7,
+    // opacity: 0.7,
   },
   h1: {
     fontSize: 35,

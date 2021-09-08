@@ -8,7 +8,7 @@ import colors from "../colors";
 function RListItem({ text }) {
   return (
     <ListItem style={{ padding: 0 }}>
-      <ListItemText style={{ color: colors.blue }}> {text} </ListItemText>
+      <ListItemText style={{ color: colors.secondary }}> {text} </ListItemText>
     </ListItem>
   );
 }

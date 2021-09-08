@@ -8,7 +8,7 @@ import colors from "../colors";
 function ListItemW({ text }) {
   return (
     <ListItem style={{ padding: 0 }}>
-      <ListItemText style={{ color: colors.light }}> {text} </ListItemText>
+      <ListItemText style={{ color: colors.black }}> {text} </ListItemText>
     </ListItem>
   );
 }

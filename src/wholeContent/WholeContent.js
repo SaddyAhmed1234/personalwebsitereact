@@ -3,10 +3,15 @@ import Home from "../Home";
 import { makeStyles } from "@material-ui/core/styles";
 import About from "../About";
 import Resume from "../Resume";
+import AppForm from "../AppForm";
+import Portfolio from "../Portfolio,";
+import Footer from "../Footer";
+import { Container } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   container: {
     background: "#fff",
+    width: "100%",
   },
 }));
 
@@ -19,6 +24,9 @@ export default function WholeContent() {
         <Home />
         <About />
         <Resume />
+        <AppForm />
+        <Portfolio />
+        <Footer />
       </div>
     </>
   );
