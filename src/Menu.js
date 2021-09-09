@@ -18,6 +18,7 @@ import BookOutlinedIcon from "@material-ui/icons/BookOutlined";
 import MailOutlineOutlinedIcon from "@material-ui/icons/MailOutlineOutlined";
 import EventNoteOutlinedIcon from "@material-ui/icons/EventNoteOutlined";
 import profile from "./images/saddybg-preview.png";
+import AppIcon from "./components/AppIcon";
 
 const useStyles = makeStyles({
   list: {
@@ -43,7 +44,13 @@ const useStyles = makeStyles({
   },
 });
 
-function MenuDrawer() {
+function MenuDrawer({
+  gotoHome,
+  gotoContact,
+  gotoAbout,
+  gotoPortfolio,
+  gotoResume,
+}) {
   const [open, setOpen] = useState(false);
   const classes = useStyles();
 
@@ -58,15 +65,30 @@ function MenuDrawer() {
           className={classes.image}
         />
       </div>
+      <List
+        style={{
+          background: colors.black,
+          display: "flex",
+          paddingTop: 25,
+          justifyContent: "center",
+          alignItems: "center",
+          paddingLeft: 15,
+        }}
+      >
+        <AppIcon IconName={"FaFacebook"} color={colors.white} />
+        <AppIcon IconName={"FaInstagram"} color={colors.white} />
+        <AppIcon IconName={"FaTwitter"} color={colors.white} />
+        <AppIcon IconName={"FaLinkedin"} color={colors.white} />
+      </List>
       <List className={classes.list}>
-        <ListItem button>
+        <ListItem button onClick={gotoHome}>
           <ListIcon icon={<HomeOutlined style={{ color: colors.white }} />} />
           <ListItemText primary={"Home"} />
         </ListItem>
 
         <Divider style={{ background: colors.grey }} />
 
-        <ListItem button>
+        <ListItem button onClick={gotoAbout}>
           <ListIcon
             icon={<AccountCircleOutlinedIcon style={{ color: colors.white }} />}
           />
@@ -75,7 +97,7 @@ function MenuDrawer() {
 
         <Divider style={{ background: colors.grey }} />
 
-        <ListItem button>
+        <ListItem button onClick={gotoResume}>
           <ListIcon
             icon={<EventNoteOutlinedIcon style={{ color: colors.white }} />}
           />
@@ -84,7 +106,7 @@ function MenuDrawer() {
 
         <Divider style={{ background: colors.grey }} />
 
-        <ListItem button>
+        <ListItem button onClick={gotoPortfolio}>
           <ListIcon
             icon={<WorkOutlineOutlinedIcon style={{ color: colors.white }} />}
           />
@@ -93,20 +115,11 @@ function MenuDrawer() {
 
         <Divider style={{ background: colors.grey }} />
 
-        <ListItem button>
+        <ListItem button onClick={gotoContact}>
           <ListIcon
             icon={<MailOutlineOutlinedIcon style={{ color: colors.white }} />}
           />
           <ListItemText primary={"Contact"} />
-        </ListItem>
-
-        <Divider style={{ background: colors.grey }} />
-
-        <ListItem button>
-          <ListIcon
-            icon={<BookOutlinedIcon style={{ color: colors.white }} />}
-          />
-          <ListItemText primary={"Blog"} />
         </ListItem>
 
         <Divider style={{ background: colors.grey }} />

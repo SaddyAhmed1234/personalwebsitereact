@@ -4,29 +4,38 @@ import colors from "./colors";
 import Divider from "@material-ui/core/Divider";
 import profile from "./images/saddybg-preview.png";
 import Heading from "./components/Heading";
-import {
-  List,
-  ListItem,
-  ListItemText,
-  Typography,
-  makeStyles,
-} from "@material-ui/core";
+import { makeStyles } from "@material-ui/core";
 import { Button } from "@material-ui/core";
 import GetAppIcon from "@material-ui/icons/GetApp";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import ProgressBar from "./components/ProgressBar";
 import CGrid from "./components/Grid";
 import WorkExperience from "./components/WorkExperience";
+import "aos/dist/aos.css";
 
 const useStyles = makeStyles((theme) => ({
   container: {
     width: "100%",
-    height: 300,
-    background: colors.black,
+    // height: 200,
+    background:
+      "background: linear-gradient(90deg, rgba(0,30,71,0.8519782913165266) 10%, rgba(0,0,0,0.8631827731092436) 84%);",
+    paddingBottom: 30,
   },
   image: {
     border: "3px solid #fff",
     borderRadius: "50%",
+  },
+  button: {
+    marginRight: 30,
+  },
+  mainContainer: {
+    padding: 40,
+    color: colors.light,
+    background:
+      "linear-gradient(90deg, rgba(0,30,71,0.8519782913165266) 10%, rgba(0,0,0,0.8631827731092436) 90%)",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
   },
 
   [theme.breakpoints.down("sm")]: {
@@ -35,14 +44,21 @@ const useStyles = makeStyles((theme) => ({
     },
     container: {
       textAlign: "center",
+      height: "auto",
     },
+    buttonContainer: {
+      textAlign: "left",
+    },
+    // button: {
+    //   marginBottom: 20,
+    // },
   },
 }));
 
 function Resume() {
   const classes = useStyles();
   return (
-    <div style={{ padding: 40, background: colors.black, color: colors.light }}>
+    <div className={classes.mainContainer}>
       <Heading text={"Resume"} />
       <div className={classes.container}>
         <Grid
@@ -51,51 +67,60 @@ function Resume() {
           alignItems="center"
           direction="row"
         >
-          <Grid item xs={12}>
-            <img
-              src={profile}
-              alt="profile"
-              width={150}
-              height={150}
-              className={classes.image}
-            />
-          </Grid>
-          <Grid item xs={12}>
-            <div style={{ marginBottom: 20 }}>
-              <h1>Saddy Ahmed</h1>
-              <p>Web and Mobile Developer</p>
+          <Grid item xs={12} lg={4} md={4}>
+            <div data-aos="fade-up">
+              <img
+                src={profile}
+                alt="profile"
+                width={150}
+                height={150}
+                className={classes.image}
+              />
             </div>
-            <Button
-              variant="contained"
-              color="primary"
-              style={{ marginRight: 30 }}
-              startIcon={<GetAppIcon />}
-            >
-              Download cv
-            </Button>
-            <Button
-              variant="contained"
-              color="secondary"
-              startIcon={<FavoriteIcon />}
-            >
-              Hire Me
-            </Button>
+          </Grid>
+          <Grid item xs={12} lg={8} md={8}>
+            <div data-aos="fade-up">
+              <div style={{ marginBottom: 20 }}>
+                <h1>Saddy Ahmed</h1>
+                <p>Web and Mobile Developer</p>
+              </div>
+              <div className={classes.buttonContainer}>
+                <Button
+                  variant="contained"
+                  color="primary"
+                  // style={{ marginRight: 30 }}
+                  className={classes.button}
+                  startIcon={<GetAppIcon />}
+                >
+                  Download cv
+                </Button>
+                <Button
+                  variant="contained"
+                  color="secondary"
+                  startIcon={<FavoriteIcon />}
+                >
+                  Hire Me
+                </Button>
+              </div>
+            </div>
           </Grid>
         </Grid>
       </div>
 
       <Divider style={{ background: "#ffff" }} />
 
-      <div style={{ paddingTop: 20 }}>
+      <div style={{ paddingTop: 40 }}>
         <CGrid
           title={"Professional Skills"}
           children={
             <>
-              <ProgressBar value={90} name={"HTML"} />
-              <ProgressBar value={70} name={"CSS"} />
-              <ProgressBar value={40} name={"JAVASCRIPT"} />
-              <ProgressBar value={65} name={"REACT"} />
-              <ProgressBar value={80} name={"REACT NATIVE"} />{" "}
+              <div data-aos="fade-up">
+                <ProgressBar value={90} name={"HTML"} />
+                <ProgressBar value={70} name={"CSS"} />
+                <ProgressBar value={40} name={"JAVASCRIPT"} />
+                <ProgressBar value={65} name={"REACT"} />
+                <ProgressBar value={80} name={"REACT NATIVE"} />
+              </div>
             </>
           }
         />

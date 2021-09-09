@@ -1,18 +1,17 @@
-import React from "react";
+import React, { useRef } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import back from "./images/back.jpg";
-// import Typical from "react-typical";
 import animationData from "./animation/programming2.json";
 import Lottie from "react-lottie";
 import colors from "./colors";
 import Grid from "@material-ui/core/Grid";
 import { Container } from "@material-ui/core";
+import { useMediaQuery } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    // background: "grey",
     height: "100vh",
-    backgroundImage: `url(${back})`,
+    background:
+      "linear-gradient(90deg, rgba(0,30,71,0.8519782913165266) 10%, rgba(0,0,0,0.8631827731092436) 90%)",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
@@ -20,14 +19,11 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    paddingBottom: 68,
-    paddingTop: 20,
   },
   text: {
     fontSize: 50,
     zIndex: 10,
     color: colors.light,
-    // fontWeight: 500,
   },
   text2: {
     color: colors.light,
@@ -35,43 +31,33 @@ const useStyles = makeStyles((theme) => ({
   shadow: {
     position: "absolute",
     top: 0,
-    left: 0,
     width: "100%",
     height: "100%",
     backgroundColor: "black",
-    opacity: 0.6,
+    opacity: 0.9,
   },
   containerHeader: {
     flexGrow: 1,
     zIndex: 23,
     paddingLeft: 40,
     fontFamily: "Balsamiq Sans",
-    // maxWidth: 1000,
   },
-  // lottie: {
-  //   width: 500,
-  //   height: 500,
-  // },
+
   [theme.breakpoints.down("sm")]: {
     text: {
       fontSize: 45,
     },
-    container: {
-      // maxWidth: 1000,
-      paddingTop: 0,
-      paddingBottom: 0,
-    },
+
     textContainer: {
       marginBottom: 50,
-    },
-    shadow: {
-      // height: ,
     },
   },
 }));
 
 function Home() {
+  // const homeRef = useRef(null);
   const classes = useStyles();
+  const isSmallDevice = useMediaQuery("(max-width:600px)");
 
   const defaultOptions = {
     loop: true,
@@ -84,7 +70,6 @@ function Home() {
 
   return (
     <div className={classes.container}>
-      <div className={classes.shadow}></div>
       <Container className={classes.containerHeader}>
         <Grid
           container
@@ -99,8 +84,12 @@ function Home() {
             </div>
           </Grid>
           <Grid item xs>
-            <div>
-              <Lottie options={defaultOptions} width={300} height={300} />
+            <div style={{ maxWidth: 1000 }}>
+              <Lottie
+                options={defaultOptions}
+                width={isSmallDevice ? 320 : 450}
+                height={isSmallDevice ? 320 : 450}
+              />
             </div>
           </Grid>
         </Grid>

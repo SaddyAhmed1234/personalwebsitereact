@@ -1,11 +1,13 @@
 import React from "react";
 import { Typography } from "@material-ui/core";
 import colors from "../colors";
+import "aos/dist/aos.css";
 
 function WorkExperience({ title, subTitle, content, color }) {
   return (
     <>
       <div
+        data-aos="fade-up"
         style={{
           border: "1px solid grey",
           padding: 20,

@@ -7,4 +7,5 @@ export default {
   blue: "#358eed",
   secondary: "#f24a58",
   grey2: "#8f9490",
+  facebook: "#4267B2",
 };

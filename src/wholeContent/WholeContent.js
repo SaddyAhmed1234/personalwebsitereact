@@ -6,7 +6,6 @@ import Resume from "../Resume";
 import AppForm from "../AppForm";
 import Portfolio from "../Portfolio,";
 import Footer from "../Footer";
-import { Container } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -25,7 +24,7 @@ export default function WholeContent() {
         <About />
         <Resume />
         <AppForm />
-        {/* <Portfolio /> */}
+        <Portfolio />
         <Footer />
       </div>
     </>

@@ -4,6 +4,7 @@ import TextField from "@material-ui/core/TextField";
 import Heading from "./components/Heading";
 import { Button, TextareaAutosize } from "@material-ui/core";
 import colors from "./colors";
+import "aos/dist/aos.css";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -40,47 +41,57 @@ export default function ColorTextFields() {
         autoComplete="off"
         style={{ textAlign: "center" }}
       >
-        <TextField
-          id="outlined-secondary"
-          label="Name"
-          color="secondary"
-          variant="outlined"
-          className={classes.textField}
-          required
-        />
-        <TextField
-          id="outlined-secondary"
-          label="Email"
-          variant="outlined"
-          color="secondary"
-          className={classes.textField}
-          // fullWidth
-          required
-        />
-        <TextField
-          id="outlined-secondary"
-          label="Subject"
-          variant="outlined"
-          color="secondary"
-          className={classes.textField}
-          required
-        />
+        <div data-aos="fade-up" style={{ width: "100%" }}>
+          <TextField
+            id="outlined-secondary"
+            label="Name"
+            color="secondary"
+            variant="outlined"
+            className={classes.textField}
+            required
+          />
+        </div>
+        <div data-aos="fade-up" style={{ width: "100%" }}>
+          <TextField
+            id="outlined-secondary"
+            label="Email"
+            variant="outlined"
+            color="secondary"
+            className={classes.textField}
+            // fullWidth
+            required
+          />
+        </div>
+        <div data-aos="fade-up" style={{ width: "100%" }}>
+          <TextField
+            id="outlined-secondary"
+            label="Subject"
+            variant="outlined"
+            color="secondary"
+            className={classes.textField}
+            required
+          />
+        </div>
+        <div data-aos="fade-up" style={{ width: "100%" }}>
+          <TextField
+            id="outlined-secondary"
+            label="Message"
+            variant="outlined"
+            color="secondary"
+            className={classes.textField}
+            required
+            minRows={6}
+            multiline
+            maxRows={10}
+          />
+        </div>
 
-        <TextField
-          id="outlined-secondary"
-          label="Message"
-          variant="outlined"
-          color="secondary"
-          className={classes.textField}
-          required
-          minRows={6}
-          multiline
-          maxRows={10}
-        />
         <br />
-        <Button variant="contained" color="secondary">
-          Submit
-        </Button>
+        <div data-aos="fade-up" style={{ width: "100%" }}>
+          <Button variant="contained" color="secondary">
+            Submit
+          </Button>
+        </div>
       </form>
     </div>
   );
