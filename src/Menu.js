@@ -14,7 +14,6 @@ import colors from "./colors";
 import HomeOutlined from "@material-ui/icons/HomeOutlined";
 import ListIcon from "./components/ListIcon";
 import WorkOutlineOutlinedIcon from "@material-ui/icons/WorkOutlineOutlined";
-import BookOutlinedIcon from "@material-ui/icons/BookOutlined";
 import MailOutlineOutlinedIcon from "@material-ui/icons/MailOutlineOutlined";
 import EventNoteOutlinedIcon from "@material-ui/icons/EventNoteOutlined";
 import profile from "./images/saddybg-preview.png";
@@ -45,13 +44,7 @@ const useStyles = makeStyles({
   },
 });
 
-function MenuDrawer({
-  gotoHome,
-  gotoContact,
-  gotoAbout,
-  gotoPortfolio,
-  gotoResume,
-}) {
+function MenuDrawer() {
   const [open, setOpen] = useState(false);
   const classes = useStyles();
 
@@ -71,8 +64,6 @@ function MenuDrawer({
           background: colors.black,
           display: "flex",
           paddingTop: 25,
-          justifyContent: "center",
-          alignItems: "center",
           paddingLeft: 15,
         }}
       >
@@ -82,7 +73,7 @@ function MenuDrawer({
         <AppIcon IconName={"FaLinkedin"} color={colors.white} />
       </List>
       <List className={classes.list}>
-        <Link to="Home" spy={true} smooth={true} offset={-60} duration={500}>
+        <Link to="Home" spy={true} smooth={true} offset={-64} duration={1000}>
           <ListItem button onClick={() => setOpen(false)}>
             <ListIcon icon={<HomeOutlined style={{ color: colors.white }} />} />
             <ListItemText primary={"Home"} />
@@ -91,7 +82,7 @@ function MenuDrawer({
 
         <Divider style={{ background: colors.grey }} />
 
-        <Link to="About" spy={true} smooth={true} offset={-60} duration={500}>
+        <Link to="About" spy={true} smooth={true} offset={-64} duration={1000}>
           <ListItem button onClick={() => setOpen(false)}>
             <ListIcon
               icon={
@@ -104,7 +95,7 @@ function MenuDrawer({
 
         <Divider style={{ background: colors.grey }} />
 
-        <Link to="Resume" spy={true} smooth={true} offset={-60} duration={500}>
+        <Link to="Resume" spy={true} smooth={true} offset={-64} duration={1000}>
           <ListItem button onClick={() => setOpen(false)}>
             <ListIcon
               icon={<EventNoteOutlinedIcon style={{ color: colors.white }} />}
@@ -119,8 +110,8 @@ function MenuDrawer({
           to="Portfolio"
           spy={true}
           smooth={true}
-          offset={-60}
-          duration={500}
+          offset={-64}
+          duration={1000}
         >
           <ListItem button onClick={() => setOpen(false)}>
             <ListIcon
@@ -132,7 +123,13 @@ function MenuDrawer({
 
         <Divider style={{ background: colors.grey }} />
 
-        <Link to="Contact" spy={true} smooth={true} offset={-60} duration={500}>
+        <Link
+          to="Contact"
+          spy={true}
+          smooth={true}
+          offset={-64}
+          duration={1000}
+        >
           <ListItem button onClick={() => setOpen(false)}>
             <ListIcon
               icon={<MailOutlineOutlinedIcon style={{ color: colors.white }} />}

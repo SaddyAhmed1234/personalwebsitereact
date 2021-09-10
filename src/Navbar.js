@@ -12,6 +12,7 @@ import Zoom from "@material-ui/core/Zoom";
 import MenuDrawer from "./Menu";
 import WholeContent from "./wholeContent/WholeContent";
 import colors from "./colors";
+import { animateScroll as Scroll } from "react-scroll";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -30,14 +31,16 @@ const useStyles = makeStyles((theme) => ({
       Width: 50,
     },
   },
+  brand: {
+    "&:hover": {
+      cursor: "pointer",
+    },
+  },
 }));
 
 function ScrollTop(props) {
   const { children, window } = props;
   const classes = useStyles();
-  // Note that you normally won't need to set the window ref as useScrollTrigger
-  // will default to window.
-  // This is only being set here because the demo is in an iframe.
   const trigger = useScrollTrigger({
     target: window ? window() : undefined,
     disableHysteresis: true,
@@ -65,32 +68,8 @@ function ScrollTop(props) {
 
 ScrollTop.propTypes = {
   children: PropTypes.element.isRequired,
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
   window: PropTypes.func,
 };
-
-// const gotoHome = () => {
-//   console.log("home");
-// };
-// const gotoAbout = () => {
-//   console.log("gotoAbout");
-// };
-
-// const gotoContact = () => {
-//   console.log("gotoContact");
-// };
-
-// const gotoPortfolio = () => {
-//   console.log("gotoPortfolio");
-// };
-
-// const gotoResume = () => {
-//   console.log("gotoResume");
-// };
-
 export default function BackToTop(props) {
   const classes = useStyles();
   return (
@@ -99,7 +78,9 @@ export default function BackToTop(props) {
       <AppBar className={classes.appbar} position="fixed">
         <Toolbar>
           <MenuDrawer />
-          <Typography variant="h6">Saddy</Typography>
+          <div onClick={() => Scroll.scrollToTop()} className={classes.brand}>
+            <Typography variant="h6">Saddy</Typography>
+          </div>
         </Toolbar>
       </AppBar>
       <Toolbar id="back-to-top-anchor" />

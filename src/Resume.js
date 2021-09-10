@@ -107,7 +107,7 @@ function Resume() {
         </Grid>
       </div>
 
-      <Divider style={{ background: "#ffff" }} />
+      <Divider style={{ background: colors.grey }} />
 
       <div style={{ paddingTop: 40 }}>
         <CGrid

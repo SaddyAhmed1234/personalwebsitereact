@@ -2,9 +2,9 @@ import { useEffect } from "react";
 import "./App.css";
 import Navbar from "./Navbar";
 import Aos from "aos";
-import AppIcon from "./components/AppIcon";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import colors from "./colors";
+import { animateScroll as Scroll, Element } from "react-scroll";
+import Scrollbar from "react-smooth-scrollbar";
 
 function App() {
   useEffect(() => {
