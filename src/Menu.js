@@ -19,6 +19,7 @@ import MailOutlineOutlinedIcon from "@material-ui/icons/MailOutlineOutlined";
 import EventNoteOutlinedIcon from "@material-ui/icons/EventNoteOutlined";
 import profile from "./images/saddybg-preview.png";
 import AppIcon from "./components/AppIcon";
+import { Link } from "react-scroll";
 
 const useStyles = makeStyles({
   list: {
@@ -81,46 +82,64 @@ function MenuDrawer({
         <AppIcon IconName={"FaLinkedin"} color={colors.white} />
       </List>
       <List className={classes.list}>
-        <ListItem button onClick={gotoHome}>
-          <ListIcon icon={<HomeOutlined style={{ color: colors.white }} />} />
-          <ListItemText primary={"Home"} />
-        </ListItem>
+        <Link to="Home" spy={true} smooth={true} offset={-60} duration={500}>
+          <ListItem button onClick={() => setOpen(false)}>
+            <ListIcon icon={<HomeOutlined style={{ color: colors.white }} />} />
+            <ListItemText primary={"Home"} />
+          </ListItem>
+        </Link>
 
         <Divider style={{ background: colors.grey }} />
 
-        <ListItem button onClick={gotoAbout}>
-          <ListIcon
-            icon={<AccountCircleOutlinedIcon style={{ color: colors.white }} />}
-          />
-          <ListItemText primary={"About Me"} />
-        </ListItem>
+        <Link to="About" spy={true} smooth={true} offset={-60} duration={500}>
+          <ListItem button onClick={() => setOpen(false)}>
+            <ListIcon
+              icon={
+                <AccountCircleOutlinedIcon style={{ color: colors.white }} />
+              }
+            />
+            <ListItemText primary={"About Me"} />
+          </ListItem>
+        </Link>
 
         <Divider style={{ background: colors.grey }} />
 
-        <ListItem button onClick={gotoResume}>
-          <ListIcon
-            icon={<EventNoteOutlinedIcon style={{ color: colors.white }} />}
-          />
-          <ListItemText primary={"Resume"} />
-        </ListItem>
+        <Link to="Resume" spy={true} smooth={true} offset={-60} duration={500}>
+          <ListItem button onClick={() => setOpen(false)}>
+            <ListIcon
+              icon={<EventNoteOutlinedIcon style={{ color: colors.white }} />}
+            />
+            <ListItemText primary={"Resume"} />
+          </ListItem>
+        </Link>
 
         <Divider style={{ background: colors.grey }} />
 
-        <ListItem button onClick={gotoPortfolio}>
-          <ListIcon
-            icon={<WorkOutlineOutlinedIcon style={{ color: colors.white }} />}
-          />
-          <ListItemText primary={"Portfolio"} />
-        </ListItem>
+        <Link
+          to="Portfolio"
+          spy={true}
+          smooth={true}
+          offset={-60}
+          duration={500}
+        >
+          <ListItem button onClick={() => setOpen(false)}>
+            <ListIcon
+              icon={<WorkOutlineOutlinedIcon style={{ color: colors.white }} />}
+            />
+            <ListItemText primary={"Portfolio"} />
+          </ListItem>
+        </Link>
 
         <Divider style={{ background: colors.grey }} />
 
-        <ListItem button onClick={gotoContact}>
-          <ListIcon
-            icon={<MailOutlineOutlinedIcon style={{ color: colors.white }} />}
-          />
-          <ListItemText primary={"Contact"} />
-        </ListItem>
+        <Link to="Contact" spy={true} smooth={true} offset={-60} duration={500}>
+          <ListItem button onClick={() => setOpen(false)}>
+            <ListIcon
+              icon={<MailOutlineOutlinedIcon style={{ color: colors.white }} />}
+            />
+            <ListItemText primary={"Contact"} />
+          </ListItem>
+        </Link>
 
         <Divider style={{ background: colors.grey }} />
       </List>

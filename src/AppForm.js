@@ -33,6 +33,7 @@ export default function ColorTextFields() {
         padding: 40,
         background: colors.light,
       }}
+      id="Contact"
     >
       <Heading text="Contact Me" />
       <form
@@ -87,11 +88,10 @@ export default function ColorTextFields() {
         </div>
 
         <br />
-        <div data-aos="fade-up" style={{ width: "100%" }}>
-          <Button variant="contained" color="secondary">
-            Submit
-          </Button>
-        </div>
+
+        <Button variant="contained" color="secondary">
+          Submit
+        </Button>
       </form>
     </div>
   );

@@ -59,6 +59,10 @@ function Home() {
   const classes = useStyles();
   const isSmallDevice = useMediaQuery("(max-width:600px)");
 
+  // const executeHomeScrool = () => {
+
+  // }
+
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -69,7 +73,7 @@ function Home() {
   };
 
   return (
-    <div className={classes.container}>
+    <div className={classes.container} id="Home">
       <Container className={classes.containerHeader}>
         <Grid
           container

@@ -6,8 +6,6 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
-import Box from "@material-ui/core/Box";
-import Container from "@material-ui/core/Container";
 import Fab from "@material-ui/core/Fab";
 import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
 import Zoom from "@material-ui/core/Zoom";
@@ -73,6 +71,25 @@ ScrollTop.propTypes = {
    */
   window: PropTypes.func,
 };
+
+// const gotoHome = () => {
+//   console.log("home");
+// };
+// const gotoAbout = () => {
+//   console.log("gotoAbout");
+// };
+
+// const gotoContact = () => {
+//   console.log("gotoContact");
+// };
+
+// const gotoPortfolio = () => {
+//   console.log("gotoPortfolio");
+// };
+
+// const gotoResume = () => {
+//   console.log("gotoResume");
+// };
 
 export default function BackToTop(props) {
   const classes = useStyles();

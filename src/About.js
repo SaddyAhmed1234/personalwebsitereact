@@ -52,7 +52,7 @@ export default function WholeContent() {
   const classes = useStyles();
   return (
     <>
-      <div className={classes.container}>
+      <div className={classes.container} id="About">
         <Heading text={"About Me"} />
         <Grid
           container

@@ -58,7 +58,7 @@ const useStyles = makeStyles((theme) => ({
 function Resume() {
   const classes = useStyles();
   return (
-    <div className={classes.mainContainer}>
+    <div className={classes.mainContainer} id="Resume">
       <Heading text={"Resume"} />
       <div className={classes.container}>
         <Grid
