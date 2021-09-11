@@ -68,7 +68,7 @@ function Resume() {
           direction="row"
         >
           <Grid item xs={12} lg={4} md={4}>
-            <div data-aos="fade-up">
+            <div>
               <img
                 src={profile}
                 alt="profile"
@@ -79,7 +79,7 @@ function Resume() {
             </div>
           </Grid>
           <Grid item xs={12} lg={8} md={8}>
-            <div data-aos="fade-up">
+            <div>
               <div style={{ marginBottom: 20 }}>
                 <h1>Saddy Ahmed</h1>
                 <p>Web and Mobile Developer</p>

@@ -73,7 +73,7 @@ function MenuDrawer() {
         <AppIcon IconName={"FaLinkedin"} color={colors.white} />
       </List>
       <List className={classes.list}>
-        <Link to="Home" spy={true} smooth={true} offset={-64} duration={1000}>
+        <Link to="Home" spy={true} smooth={true} offset={-57} duration={500}>
           <ListItem button onClick={() => setOpen(false)}>
             <ListIcon icon={<HomeOutlined style={{ color: colors.white }} />} />
             <ListItemText primary={"Home"} />
@@ -82,7 +82,7 @@ function MenuDrawer() {
 
         <Divider style={{ background: colors.grey }} />
 
-        <Link to="About" spy={true} smooth={true} offset={-64} duration={1000}>
+        <Link to="About" spy={true} smooth={true} offset={-57} duration={500}>
           <ListItem button onClick={() => setOpen(false)}>
             <ListIcon
               icon={
@@ -95,7 +95,7 @@ function MenuDrawer() {
 
         <Divider style={{ background: colors.grey }} />
 
-        <Link to="Resume" spy={true} smooth={true} offset={-64} duration={1000}>
+        <Link to="Resume" spy={true} smooth={true} offset={-57} duration={500}>
           <ListItem button onClick={() => setOpen(false)}>
             <ListIcon
               icon={<EventNoteOutlinedIcon style={{ color: colors.white }} />}
@@ -110,8 +110,8 @@ function MenuDrawer() {
           to="Portfolio"
           spy={true}
           smooth={true}
-          offset={-64}
-          duration={1000}
+          offset={-57}
+          duration={500}
         >
           <ListItem button onClick={() => setOpen(false)}>
             <ListIcon
@@ -123,13 +123,7 @@ function MenuDrawer() {
 
         <Divider style={{ background: colors.grey }} />
 
-        <Link
-          to="Contact"
-          spy={true}
-          smooth={true}
-          offset={-64}
-          duration={1000}
-        >
+        <Link to="Contact" spy={true} smooth={true} offset={-57} duration={500}>
           <ListItem button onClick={() => setOpen(false)}>
             <ListIcon
               icon={<MailOutlineOutlinedIcon style={{ color: colors.white }} />}

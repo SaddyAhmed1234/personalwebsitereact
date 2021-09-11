@@ -36,13 +36,13 @@ export default function ColorTextFields() {
       id="Contact"
     >
       <Heading text="Contact Me" />
-      <form
-        className={classes.root}
-        noValidate
-        autoComplete="off"
-        style={{ textAlign: "center" }}
-      >
-        <div data-aos="fade-up" style={{ width: "100%" }}>
+      <div data-aos="fade-up">
+        <form
+          className={classes.root}
+          noValidate
+          autoComplete="off"
+          style={{ textAlign: "center" }}
+        >
           <TextField
             id="outlined-secondary"
             label="Name"
@@ -51,8 +51,7 @@ export default function ColorTextFields() {
             className={classes.textField}
             required
           />
-        </div>
-        <div data-aos="fade-up" style={{ width: "100%" }}>
+
           <TextField
             id="outlined-secondary"
             label="Email"
@@ -62,8 +61,7 @@ export default function ColorTextFields() {
             // fullWidth
             required
           />
-        </div>
-        <div data-aos="fade-up" style={{ width: "100%" }}>
+
           <TextField
             id="outlined-secondary"
             label="Subject"
@@ -72,8 +70,7 @@ export default function ColorTextFields() {
             className={classes.textField}
             required
           />
-        </div>
-        <div data-aos="fade-up" style={{ width: "100%" }}>
+
           <TextField
             id="outlined-secondary"
             label="Message"
@@ -85,14 +82,14 @@ export default function ColorTextFields() {
             multiline
             maxRows={10}
           />
-        </div>
 
-        <br />
+          <br />
 
-        <Button variant="contained" color="secondary">
-          Submit
-        </Button>
-      </form>
+          <Button variant="contained" color="secondary">
+            Submit
+          </Button>
+        </form>
+      </div>
     </div>
   );
 }

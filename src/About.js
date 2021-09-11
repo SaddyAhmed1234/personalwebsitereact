@@ -61,7 +61,7 @@ export default function WholeContent() {
           alignItems="center"
         >
           <Grid item xs={12} lg={5}>
-            <div data-aos="fade-up" className={classes.imageContainer}>
+            <div data-aos="zoom-in-right" className={classes.imageContainer}>
               <div className={classes.imageCon}>
                 <img src={profile} alt="profile" className={classes.image} />
               </div>

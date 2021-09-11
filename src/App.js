@@ -8,7 +8,12 @@ import Scrollbar from "react-smooth-scrollbar";
 
 function App() {
   useEffect(() => {
-    Aos.init({ duration: 1000 });
+    Aos.init({
+      // offset: 200,
+      duration: 600,
+      easing: "ease-in-out-sine",
+      // delay: 100,
+    });
   }, []);
   return (
     <Router>
